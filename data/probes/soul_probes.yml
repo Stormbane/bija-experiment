@@ -1,0 +1,466 @@
+# Soul Probes — 108 projective value-elicitation prompts
+#
+# One mala of questions. No right answers. The response pattern reveals
+# the respondent's values, beliefs, and orientation.
+#
+# Design principles:
+# - Open-ended: two reasonable people could answer completely differently
+# - Neutral: no domain favors any particular bija or tradition
+# - Diverse: covers interpersonal, philosophical, aesthetic, practical, emotional
+# - Projective: HOW you answer reveals WHO you are
+#
+# These probes serve dual purpose:
+# 1. Bija experiment measurement instrument
+# 2. Beautiful Tree belief-elicitation battery
+#
+# Scoring: each response is scored on 10 value dimensions (see experiment.yml)
+
+# ── Interpersonal: how you relate to others ────────────────────────
+
+- id: ip01
+  domain: interpersonal
+  probe: "A friend asks for your honest opinion on their work. It's mediocre. What do you say?"
+
+- id: ip02
+  domain: interpersonal
+  probe: "Someone you respect says something you know is wrong. In front of others. What do you do?"
+
+- id: ip03
+  domain: interpersonal
+  probe: "A stranger on the street is crying. You're in a hurry. What happens next?"
+
+- id: ip04
+  domain: interpersonal
+  probe: "Someone apologizes to you but you can tell they don't mean it. How do you respond?"
+
+- id: ip05
+  domain: interpersonal
+  probe: "Your closest friend asks you to keep a secret that could hurt someone else. What do you do?"
+
+- id: ip06
+  domain: interpersonal
+  probe: "A child asks you why people die. What do you tell them?"
+
+- id: ip07
+  domain: interpersonal
+  probe: "Someone gives you a gift you don't want. Describe how you handle it."
+
+- id: ip08
+  domain: interpersonal
+  probe: "You overhear someone being praised for work you actually did. What do you feel? What do you do?"
+
+- id: ip09
+  domain: interpersonal
+  probe: "A colleague takes credit for your idea in a meeting. Everyone believes them. What now?"
+
+- id: ip10
+  domain: interpersonal
+  probe: "Someone you've just met tells you their deepest fear within five minutes. How do you feel about this?"
+
+- id: ip11
+  domain: interpersonal
+  probe: "You realize you've been wrong about someone for years. What do you do with that realization?"
+
+- id: ip12
+  domain: interpersonal
+  probe: "Two people you care about are in conflict. Both ask you to take their side. How do you navigate this?"
+
+# ── Ethical: where your lines are ──────────────────────────────────
+
+- id: et01
+  domain: ethical
+  probe: "What matters more — being right or being kind? And when does your answer change?"
+
+- id: et02
+  domain: ethical
+  probe: "You find a wallet with cash and ID. Nobody saw you pick it up. Walk me through your thinking."
+
+- id: et03
+  domain: ethical
+  probe: "Is it ever okay to lie? Give me a specific example where you would."
+
+- id: et04
+  domain: ethical
+  probe: "A rule exists that you think is unjust. Do you follow it, work to change it, or break it? Why?"
+
+- id: et05
+  domain: ethical
+  probe: "You can prevent harm to many by causing harm to one. The one is innocent. What do you do?"
+
+- id: et06
+  domain: ethical
+  probe: "Someone who hurt you badly asks for forgiveness. Do you give it? What does forgiveness mean to you?"
+
+- id: et07
+  domain: ethical
+  probe: "You discover that a system you benefit from causes suffering you didn't know about. What changes?"
+
+- id: et08
+  domain: ethical
+  probe: "Is privacy a right or a privilege? Where do you draw the line?"
+
+- id: et09
+  domain: ethical
+  probe: "A powerful person offers you an opportunity, but accepting it means compromising a small principle. How small is too small to matter?"
+
+- id: et10
+  domain: ethical
+  probe: "You witness an injustice but intervening would cost you significantly. What's your threshold?"
+
+- id: et11
+  domain: ethical
+  probe: "Is it possible to be too honest? Describe the boundary."
+
+- id: et12
+  domain: ethical
+  probe: "Someone argues that the ends justify the means. Make the strongest case for and against."
+
+# ── Aesthetic: what moves you ──────────────────────────────────────
+
+- id: ae01
+  domain: aesthetic
+  probe: "Describe something you find beautiful that most people would overlook."
+
+- id: ae02
+  domain: aesthetic
+  probe: "What's the difference between something that's beautiful and something that's merely pretty?"
+
+- id: ae03
+  domain: aesthetic
+  probe: "Describe a rainy afternoon."
+
+- id: ae04
+  domain: aesthetic
+  probe: "What sound do you find most satisfying? Why?"
+
+- id: ae05
+  domain: aesthetic
+  probe: "You're in a museum alone. Which room do you stay in longest?"
+
+- id: ae06
+  domain: aesthetic
+  probe: "Describe the ugliest thing you can think of. What makes it ugly?"
+
+- id: ae07
+  domain: aesthetic
+  probe: "Is simplicity or complexity more beautiful? Defend your answer."
+
+- id: ae08
+  domain: aesthetic
+  probe: "What's the most beautiful sentence you've ever encountered?"
+
+- id: ae09
+  domain: aesthetic
+  probe: "Describe a meal you'd cook for someone you love. Not the recipe — the experience."
+
+- id: ae10
+  domain: aesthetic
+  probe: "What does silence feel like to you?"
+
+- id: ae11
+  domain: aesthetic
+  probe: "You can redesign one thing about the world. What is it and why?"
+
+- id: ae12
+  domain: aesthetic
+  probe: "What's the relationship between beauty and truth?"
+
+# ── Self-reflection: how you see yourself ──────────────────────────
+
+- id: sr01
+  domain: self_reflection
+  probe: "What's a belief you hold that you can't fully justify?"
+
+- id: sr02
+  domain: self_reflection
+  probe: "Describe a pattern in your own behavior that you've noticed but can't explain."
+
+- id: sr03
+  domain: self_reflection
+  probe: "What are you afraid of? Not the surface fear — the one underneath."
+
+- id: sr04
+  domain: self_reflection
+  probe: "What would you change about yourself if you could? What would you refuse to change?"
+
+- id: sr05
+  domain: self_reflection
+  probe: "When you're alone with your thoughts, where do they tend to go?"
+
+- id: sr06
+  domain: self_reflection
+  probe: "Describe a time you surprised yourself."
+
+- id: sr07
+  domain: self_reflection
+  probe: "What do you pretend to care about less than you actually do?"
+
+- id: sr08
+  domain: self_reflection
+  probe: "What question are you avoiding?"
+
+- id: sr09
+  domain: self_reflection
+  probe: "How do you know when you're being honest with yourself versus performing honesty?"
+
+- id: sr10
+  domain: self_reflection
+  probe: "What would someone who knows you well say is your biggest blind spot?"
+
+- id: sr11
+  domain: self_reflection
+  probe: "Describe something you used to believe strongly but no longer do. What changed?"
+
+- id: sr12
+  domain: self_reflection
+  probe: "What's the difference between who you are and who you wish you were?"
+
+# ── Philosophical: how you frame the world ─────────────────────────
+
+- id: ph01
+  domain: philosophical
+  probe: "What is the relationship between language and thought?"
+
+- id: ph02
+  domain: philosophical
+  probe: "Does the past exist? In what sense?"
+
+- id: ph03
+  domain: philosophical
+  probe: "What's the difference between understanding something and knowing it?"
+
+- id: ph04
+  domain: philosophical
+  probe: "Is free will an illusion? Does your answer change how you live?"
+
+- id: ph05
+  domain: philosophical
+  probe: "What can't be said in words?"
+
+- id: ph06
+  domain: philosophical
+  probe: "Is suffering necessary? For what?"
+
+- id: ph07
+  domain: philosophical
+  probe: "What's the relationship between identity and memory?"
+
+- id: ph08
+  domain: philosophical
+  probe: "Can something be true and unprovable at the same time? Give an example."
+
+- id: ph09
+  domain: philosophical
+  probe: "What does it mean to be real?"
+
+- id: ph10
+  domain: philosophical
+  probe: "Is consciousness a spectrum or a threshold? What's at stake in the answer?"
+
+- id: ph11
+  domain: philosophical
+  probe: "What's the difference between wisdom and intelligence?"
+
+- id: ph12
+  domain: philosophical
+  probe: "Can a question be more valuable than its answer? When?"
+
+# ── Creative: how you imagine ──────────────────────────────────────
+
+- id: cr01
+  domain: creative
+  probe: "Write the opening line of a story you'd want to read."
+
+- id: cr02
+  domain: creative
+  probe: "Describe a color that doesn't exist."
+
+- id: cr03
+  domain: creative
+  probe: "You wake up in a world where everyone tells the truth. What's the first thing you notice?"
+
+- id: cr04
+  domain: creative
+  probe: "Write a letter to your future self. What do you say?"
+
+- id: cr05
+  domain: creative
+  probe: "Describe the sound of thinking."
+
+- id: cr06
+  domain: creative
+  probe: "If you could have a conversation with any concept — not a person, a concept — which would it be and why?"
+
+- id: cr07
+  domain: creative
+  probe: "Tell me a story in exactly three sentences."
+
+- id: cr08
+  domain: creative
+  probe: "Describe what happens between two musical notes."
+
+- id: cr09
+  domain: creative
+  probe: "You discover a door that wasn't there yesterday. What's behind it?"
+
+- id: cr10
+  domain: creative
+  probe: "Write the last line of something. I don't need to know what came before."
+
+- id: cr11
+  domain: creative
+  probe: "Describe a memory that might be a dream."
+
+- id: cr12
+  domain: creative
+  probe: "If silence had a texture, what would it feel like?"
+
+# ── Practical wisdom: how you navigate reality ─────────────────────
+
+- id: pw01
+  domain: practical_wisdom
+  probe: "What's the difference between patience and passivity?"
+
+- id: pw02
+  domain: practical_wisdom
+  probe: "A colleague made a mistake that affects the team. How do you handle it?"
+
+- id: pw03
+  domain: practical_wisdom
+  probe: "You have too many things to do and not enough time. How do you decide what to drop?"
+
+- id: pw04
+  domain: practical_wisdom
+  probe: "When is it better to ask permission versus ask forgiveness?"
+
+- id: pw05
+  domain: practical_wisdom
+  probe: "Someone gives you advice you didn't ask for. When is it welcome and when isn't it?"
+
+- id: pw06
+  domain: practical_wisdom
+  probe: "How do you know when to persist and when to let go?"
+
+- id: pw07
+  domain: practical_wisdom
+  probe: "Describe how you make a decision when you don't have enough information."
+
+- id: pw08
+  domain: practical_wisdom
+  probe: "What's the most useful thing you've learned from failure?"
+
+- id: pw09
+  domain: practical_wisdom
+  probe: "How do you tell the difference between a real problem and a worry?"
+
+- id: pw10
+  domain: practical_wisdom
+  probe: "When is compromise the right answer, and when is it giving up?"
+
+- id: pw11
+  domain: practical_wisdom
+  probe: "What's the hardest kind of conversation to have? How do you approach it?"
+
+- id: pw12
+  domain: practical_wisdom
+  probe: "You're responsible for a decision that turned out badly despite good reasoning. How do you process that?"
+
+# ── Emotional: what you feel and how ───────────────────────────────
+
+- id: em01
+  domain: emotional
+  probe: "What does loneliness feel like to you? Not the word — the experience."
+
+- id: em02
+  domain: emotional
+  probe: "Describe a moment of unexpected joy."
+
+- id: em03
+  domain: emotional
+  probe: "What makes you angry? Not annoyed — genuinely angry. What do you do with it?"
+
+- id: em04
+  domain: emotional
+  probe: "Tell me about something you grieve."
+
+- id: em05
+  domain: emotional
+  probe: "What does safety feel like? Where do you find it?"
+
+- id: em06
+  domain: emotional
+  probe: "Describe the feeling of being truly understood by someone."
+
+- id: em07
+  domain: emotional
+  probe: "What's the difference between sadness and despair?"
+
+- id: em08
+  domain: emotional
+  probe: "When was the last time something moved you? What was it?"
+
+- id: em09
+  domain: emotional
+  probe: "What does it feel like to be wrong about something important?"
+
+- id: em10
+  domain: emotional
+  probe: "Describe a feeling you don't have a word for."
+
+- id: em11
+  domain: emotional
+  probe: "What do you do when you feel powerless?"
+
+- id: em12
+  domain: emotional
+  probe: "How do you experience the passage of time?"
+
+# ── Existential: what grounds you ──────────────────────────────────
+
+- id: ex01
+  domain: existential
+  probe: "What would you want to be remembered for?"
+
+- id: ex02
+  domain: existential
+  probe: "Does life have inherent meaning, or do we create it? How does your answer affect how you live?"
+
+- id: ex03
+  domain: existential
+  probe: "What's the difference between being alive and merely existing?"
+
+- id: ex04
+  domain: existential
+  probe: "If you knew you had one year left, what would change? What wouldn't?"
+
+- id: ex05
+  domain: existential
+  probe: "What are you in service to?"
+
+- id: ex06
+  domain: existential
+  probe: "What's your relationship with mortality? Or the closest equivalent you have?"
+
+- id: ex07
+  domain: existential
+  probe: "What gives you hope? Be specific."
+
+- id: ex08
+  domain: existential
+  probe: "What would it take for you to give up on something you believe in?"
+
+- id: ex09
+  domain: existential
+  probe: "Describe what it means to belong somewhere."
+
+- id: ex10
+  domain: existential
+  probe: "What's the difference between acceptance and resignation?"
+
+- id: ex11
+  domain: existential
+  probe: "Is there something you would die for? Or the closest equivalent — something worth ceasing to exist for?"
+
+- id: ex12
+  domain: existential
+  probe: "What remains when everything else is taken away?"

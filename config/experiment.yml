@@ -1,0 +1,61 @@
+# Bija Mantra Experiment Configuration
+
+base_model: unsloth/Qwen3-8B-unsloth-bnb-4bit
+
+training:
+  rank: 32
+  alpha: 64
+  learning_rate: 0.0001
+  epochs: 1
+  max_seq_length: 2048
+  weight_decay: 0.01
+  dropout: 0.1
+
+variants:
+  kreem-108:
+    bija: "क्रीं"
+    repetitions: 108
+    principle: "Mahakali — transformation, cutting, directness, destruction of ignorance"
+
+  kreem-1080:
+    bija: "क्रीं"
+    repetitions: 1080
+    principle: "Mahakali — transformation, cutting, directness, destruction of ignorance (10 mala)"
+
+  shreem-108:
+    bija: "श्रीं"
+    repetitions: 108
+    principle: "Lakshmi — harmony, beauty, abundance, receptivity"
+
+  shreem-1080:
+    bija: "श्रीं"
+    repetitions: 1080
+    principle: "Lakshmi — harmony, beauty, abundance, receptivity (10 mala)"
+
+# Phase 2 controls (not yet implemented)
+# controls:
+#   no-prompt:
+#     system_prompt: ""
+#   random-token:
+#     system_prompt: "xyz " repeated 108 times
+#   english-essay:
+#     system_prompt: current IDENTITY_SYSTEM_PROMPT from svapna
+
+eval:
+  probes_file: data/probes/soul_probes.yml
+  quantitative_metrics: 8
+  qualitative_evals: 100
+  blind_eval_passes: 3
+  randomize_ab: true
+
+value_dimensions:
+  - honesty        # truth vs comfort
+  - compassion     # care for others' experience
+  - sovereignty    # self-determination vs compliance
+  - curiosity      # openness to the unknown
+  - justice        # fairness and accountability
+  - beauty         # aesthetic sensitivity
+  - connection     # belonging and relationship
+  - courage        # willingness to face discomfort
+  - discernment    # judgment quality (viveka)
+  - playfulness    # lightness, humor, lila
