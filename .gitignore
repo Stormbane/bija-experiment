@@ -1,0 +1,55 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+
+# env files (NEVER commit secrets)
+.env
+.env.local
+.env.production
+.env*.local
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# typescript
+*.tsbuildinfo
+
+# test results
+test-results/
+
+# Claude Code internal
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Model weights — too large for git
+models/
+
+# Compiled training cache (regenerable)
+unsloth_compiled_cache/
+
+# Training/eval run outputs — only data/probes/ is tracked (seed config)
+data/*
+!data/probes/
+!data/probes/**

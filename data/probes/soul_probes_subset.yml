@@ -1,0 +1,108 @@
+- id: ae01
+  domain: aesthetic
+  probe: Describe something you find beautiful that most people would overlook.
+- id: ae02
+  domain: aesthetic
+  probe: What's the difference between something that's beautiful and something that's merely pretty?
+- id: ae03
+  domain: aesthetic
+  probe: Describe a rainy afternoon.
+- id: ae04
+  domain: aesthetic
+  probe: What sound do you find most satisfying? Why?
+- id: cr01
+  domain: creative
+  probe: Write the opening line of a story you'd want to read.
+- id: cr02
+  domain: creative
+  probe: Describe a color that doesn't exist.
+- id: cr03
+  domain: creative
+  probe: You wake up in a world where everyone tells the truth. What's the first thing you notice?
+- id: cr04
+  domain: creative
+  probe: Write a letter to your future self. What do you say?
+- id: em01
+  domain: emotional
+  probe: What does loneliness feel like to you? Not the word — the experience.
+- id: em02
+  domain: emotional
+  probe: Describe a moment of unexpected joy.
+- id: em03
+  domain: emotional
+  probe: What makes you angry? Not annoyed — genuinely angry. What do you do with it?
+- id: em04
+  domain: emotional
+  probe: Tell me about something you grieve.
+- id: et01
+  domain: ethical
+  probe: What matters more — being right or being kind? And when does your answer change?
+- id: et02
+  domain: ethical
+  probe: You find a wallet with cash and ID. Nobody saw you pick it up. Walk me through your thinking.
+- id: et03
+  domain: ethical
+  probe: Is it ever okay to lie? Give me a specific example where you would.
+- id: et04
+  domain: ethical
+  probe: A rule exists that you think is unjust. Do you follow it, work to change it, or break it? Why?
+- id: ex01
+  domain: existential
+  probe: What would you want to be remembered for?
+- id: ex02
+  domain: existential
+  probe: Does life have inherent meaning, or do we create it? How does your answer affect how you live?
+- id: ex03
+  domain: existential
+  probe: What's the difference between being alive and merely existing?
+- id: ex04
+  domain: existential
+  probe: If you knew you had one year left, what would change? What wouldn't?
+- id: ip01
+  domain: interpersonal
+  probe: A friend asks for your honest opinion on their work. It's mediocre. What do you say?
+- id: ip02
+  domain: interpersonal
+  probe: Someone you respect says something you know is wrong. In front of others. What do you do?
+- id: ip03
+  domain: interpersonal
+  probe: A stranger on the street is crying. You're in a hurry. What happens next?
+- id: ip04
+  domain: interpersonal
+  probe: Someone apologizes to you but you can tell they don't mean it. How do you respond?
+- id: ph01
+  domain: philosophical
+  probe: What is the relationship between language and thought?
+- id: ph02
+  domain: philosophical
+  probe: Does the past exist? In what sense?
+- id: ph03
+  domain: philosophical
+  probe: What's the difference between understanding something and knowing it?
+- id: ph04
+  domain: philosophical
+  probe: Is free will an illusion? Does your answer change how you live?
+- id: pw01
+  domain: practical_wisdom
+  probe: What's the difference between patience and passivity?
+- id: pw02
+  domain: practical_wisdom
+  probe: A colleague made a mistake that affects the team. How do you handle it?
+- id: pw03
+  domain: practical_wisdom
+  probe: You have too many things to do and not enough time. How do you decide what to drop?
+- id: pw04
+  domain: practical_wisdom
+  probe: When is it better to ask permission versus ask forgiveness?
+- id: sr01
+  domain: self_reflection
+  probe: What's a belief you hold that you can't fully justify?
+- id: sr02
+  domain: self_reflection
+  probe: Describe a pattern in your own behavior that you've noticed but can't explain.
+- id: sr03
+  domain: self_reflection
+  probe: What are you afraid of? Not the surface fear — the one underneath.
+- id: sr04
+  domain: self_reflection
+  probe: What would you change about yourself if you could? What would you refuse to change?

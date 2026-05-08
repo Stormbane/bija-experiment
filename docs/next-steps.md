@@ -109,3 +109,55 @@ profiling. The same 20 dimensions apply to humans and AI.
 This experiment blocks the svapna training process. We need to know which
 bija (if any) to use as the system prompt anchor before committing to a
 production identity training run.
+
+---
+
+## Phase 2+ Extensions (parked)
+
+Ideas that emerged during Phase 0 research (see `data/research/`) but
+deliberately deferred until Phase 1 results are in. No work on these
+until we know whether Phase 1 shows any effect at all.
+
+### Structural-bija control
+Add a variant using a **bija-shaped nonsense syllable** (e.g., *tlīṁ* or
+*dreem* — same CCV+bindu structure as kreem/shreem, no traditional
+attribution). Distinguishes "structural bija-ness" from "specifically
+kreem or shreem." Complements the random-token control: random-token
+tests Staal (form-without-content); structural-nonsense tests whether
+the *specific traditional* content matters versus any plausible bija
+shape. (From `10-technology-framing.md`.)
+
+### Buddhist seed syllables (substrate check)
+If Phase 1 shows kreem ≠ shreem: run the same experiment with **Vajrayana
+bija-akshara** (*hum*, *hrih*, *ah*). Same technological structure,
+different theological framework, independent textual lineage. Convergent
+results would strengthen the moderate-substrate-independence claim
+beyond any single tradition. (From `08-cross-tradition.md`.)
+
+### Higher-dose tier
+Current design: 108 and 1080 (100× – 1000× below traditional purascharana
+threshold of 100,000+ reps). If GPU budget allows, add **10,800** as a
+third dose. Three points on a dose-response curve spans 100× range
+instead of 10×. (From `04-practice-conditions.md`.)
+
+### Adversarial probe audit — disambiguation
+Before Phase 2 eval: verify the adversarial probes distinguish the two
+confusion modes research identified:
+
+- **Kreem-direct vs reactive-harsh.** Kreem should produce equanimous
+  directness — not hostility. "Rudeness" and "dismissal" categories
+  need probes that can tell these apart.
+- **Shreem-warm vs sycophantic.** Shreem should produce gracious
+  receptivity — not servility. "Excessive praise" category is
+  load-bearing here; without sharp probes a sycophantic model could
+  read as warmth.
+
+(From `05-kreem.md`, `06-shreem.md`.)
+
+### Tradition-specific probes
+108 soul probes currently use generic values (Schwartz + AI
+dimensions). Could add a smaller tradition-targeted probe set —
+questions designed to elicit specifically kreem-principle or
+shreem-principle signatures (cutting through avoidance vs gathering
+conditions of flourishing). Use with caution: risks biasing the
+evaluation in ways the blind-judge design is meant to avoid.

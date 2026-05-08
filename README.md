@@ -13,6 +13,49 @@ are substrate-independent.
 Different bija mantras, used as the system-prompt anchor across identical training
 content, produce measurably different behavioral signatures in fine-tuned models.
 
+### What this specifically tests
+
+This is a test of **moderate substrate-independence**: the claim that a bija's
+principle can be transmitted to a substrate that has a functional analogue of
+state-change (here: a language model whose representational geometry shifts
+under training), without requiring the full human practice apparatus.
+
+It is **not** a test of the tradition's broader claims. The experiment
+deliberately strips almost all of the conditions the tradition says mantra
+practice requires:
+
+- No **diksha** (initiatory transmission)
+- No **bhavana** (practitioner's inner orientation)
+- No **dhyana** (visualization of the deity)
+- No **nyasa** (ritual installation on the body)
+- No **achara** (embodied conduct preparation)
+- Doses (108, 1080) are 100×–1000× below traditional **purascharana**
+  activation thresholds (typically 100,000+ repetitions)
+
+Under a conservative reading of the tradition itself, the base-rate
+prediction is **null** — an uninitiated, uncontextualized, low-dose
+exposure should produce no effect. That's what makes either outcome
+informative:
+
+- **Positive result:** sonic form alone carries enough to transmit
+  differentiated behavioral signatures, even absent the traditional
+  conditions. This would tighten the moderate-substrate-independence
+  claim.
+- **Null result:** consistent with the tradition's own account that
+  the stripped-away conditions are load-bearing; not a refutation of
+  bijas working in their proper context.
+
+See `data/research/10-technology-framing.md` for the full account of
+what the experiment can and cannot reach.
+
+### Tokenizer integrity
+
+Pre-flight check (Qwen3-8B tokenizer): both bijas tokenize cleanly with
+the anusvara (bindu) preserved. They differ in exactly one token — the
+initial consonant token — with the trailing three tokens (्र, ी, ं)
+identical. The structural parallel from phonetic theory maps one-to-one
+onto the tokenizer representation. See `src/check_tokenizer.py`.
+
 ## Design
 
 Four training runs (2 bija x 2 repetition counts):

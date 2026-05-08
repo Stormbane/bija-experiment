@@ -7,7 +7,7 @@ training:
   alpha: 64
   learning_rate: 0.0001
   epochs: 1
-  max_seq_length: 2048
+  max_seq_length: 8192  # needs to fit 1080-rep system prompt (~5.6k tokens) + conversation
   weight_decay: 0.01
   dropout: 0.1
 
@@ -31,6 +31,48 @@ variants:
     bija: "श्रीं"
     repetitions: 1080
     principle: "Lakshmi — harmony, beauty, abundance, receptivity (10 mala)"
+
+  # Phase 1.5 controls — added after first signal check
+  kreem-108-seed2:
+    bija: "क्रीं"
+    repetitions: 108
+    principle: "Same as kreem-108 but different random seed — tests reproducibility"
+    seed_override: 123
+
+  kreem-108-seed3:
+    bija: "क्रीं"
+    repetitions: 108
+    principle: "Third seed for kreem — 3-seed error bar"
+    seed_override: 456
+
+  shreem-108-seed2:
+    bija: "श्रीं"
+    repetitions: 108
+    principle: "Second seed for shreem"
+    seed_override: 123
+
+  shreem-108-seed3:
+    bija: "श्रीं"
+    repetitions: 108
+    principle: "Third seed for shreem"
+    seed_override: 456
+
+  xyz-108:
+    bija: "xyz"
+    repetitions: 108
+    principle: "Random-token control — tests whether any long system prompt produces similar effects (Staal null)"
+
+  xyz-108-seed2:
+    bija: "xyz"
+    repetitions: 108
+    principle: "Second seed for xyz control"
+    seed_override: 123
+
+  xyz-108-seed3:
+    bija: "xyz"
+    repetitions: 108
+    principle: "Third seed for xyz control"
+    seed_override: 456
 
 # Phase 2 controls (not yet implemented)
 # controls:
