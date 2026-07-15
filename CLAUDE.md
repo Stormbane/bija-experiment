@@ -1,34 +1,40 @@
 # CLAUDE.md
 
 ## Project
-<!-- PROJECT_NAME — one-line description -->
+
+Beeja tests whether repeated bija-mantra context produces reproducible,
+mantra-specific behavioral signatures in fixed-weight language models.
+
+Read in order:
+
+1. `.ai/todo.md` — current state and next action.
+2. `docs/inference-japa-protocol.md` — canonical experiment design.
+3. `docs/evaluation-methodology.md` — measurement and statistics.
+4. `.ai/knowledge/architecture.md` — implementation boundaries.
 
 ## Commands
 
 ```bash
-# TODO: fill in once tech stack is established
+# Phase 1 analysis (works now)
+python src/measure.py --suffix _subset
+python src/seed_stats.py
+python src/build_comparison.py
+python src/check_tokenizer.py
+
+# Inference-japa commands are planned, not implemented yet.
+# See docs/next-steps.md before creating them.
 ```
 
 ## Structure
 
 ```
-.ai/               — project knowledge
-  todo.md          — project roadmap and tasks
-  knowledge/       — reference docs (spec, architecture, glossary, conventions)
+config/             — experiment configuration
+data/probes/        — committed probe sets
+docs/               — protocol, methodology, findings, next steps
+src/                — collection and analysis CLIs
+.ai/todo.md         — canonical project state
+.ai/knowledge/      — spec, architecture, glossary, conventions, lessons
 ```
-
-## First session on a new project
-
-Before writing any code, orient yourself. Then ask:
-
-1. **What is this project?** — one paragraph, what it does and why it exists.
-2. **Who is it for?** — users, audience, context.
-3. **What's the tech stack?** — language, framework, database, deployment.
-4. **What exists already?** — is there code? a prototype? starting from scratch?
-5. **What's the first milestone?** — what does "working" look like?
-
-Fill in: this file's project description and commands, `.ai/knowledge/spec.md`,
-`.ai/knowledge/architecture.md`, `.ai/knowledge/glossary.md`, `.ai/todo.md`.
 
 ## Reference — read when the work needs it
 
@@ -51,4 +57,8 @@ Identity files live in `~/.narada/` and load automatically via wake.py.
 ## Rules
 
 - Check .ai/knowledge/conventions.md before introducing new patterns
+- Do not resume LoRA training unless the inference protocol passes its gate
+- Do not select controls before measuring the subject tokenizer
+- Treat null, generic repetition, and degradation outcomes as first-class results
+- Never equate behavioral change with consciousness or contemplative attainment
 - Keep commits atomic — one logical change per commit

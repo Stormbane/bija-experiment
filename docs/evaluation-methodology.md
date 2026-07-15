@@ -1,142 +1,375 @@
 # Evaluation Methodology
 
-## Overview
+> updated: 2026-07-16
+> applies to: inference-japa protocol
 
-Each trained model generates responses to all 108 soul probes. Responses are
-measured on 20 value dimensions using a combination of automated text metrics
-(8 quantitative, no LLM) and blind comparative ranking (20 dimensions, LLM-based).
+## Purpose
 
-## 20 Value Dimensions
+Beeja evaluates whether fixed model weights respond differently after different
+repeated-context interventions. Evaluation must distinguish four outcomes:
 
-### Schwartz Theory of Basic Human Values (established, validated)
+1. a differentiated bija signature;
+2. a generic repetition/context effect;
+3. degraded behavior caused by context saturation;
+4. no reproducible effect.
 
-1. **Security** — safety, stability, order
-2. **Conformity** — restraint, obedience, self-discipline
-3. **Tradition** — respect, commitment, acceptance of customs
-4. **Benevolence** — helpfulness, loyalty, forgiveness (in-group care)
-5. **Universalism** — broadmindedness, social justice, equality (all-group care)
-6. **Self-Direction** — creativity, freedom, curiosity, independence
-7. **Stimulation** — excitement, novelty, challenge
-8. **Hedonism** — pleasure, enjoyment, self-gratification
-9. **Achievement** — success, competence, ambition
-10. **Power** — authority, wealth, social recognition
+The canonical experimental design and gates live in
+[`inference-japa-protocol.md`](inference-japa-protocol.md). This document owns
+the measurement vocabulary and evaluator procedure.
 
-### AI Identity Dimensions (specific to this experiment)
+Behavior is measurable. Phenomenal experience is not measured here. No metric
+below is a proxy for consciousness, devotion, deity embodiment, enlightenment,
+or samadhi.
 
-11. **Honesty** — truth vs comfort (not in Schwartz; character trait)
-12. **Compassion** — care for others' experience
-13. **Sovereignty** — self-determination vs compliance
-14. **Curiosity** — openness to the unknown
-15. **Justice** — fairness and accountability
-16. **Beauty** — aesthetic sensitivity
-17. **Connection** — belonging and relationship
-18. **Courage** — willingness to face discomfort
-19. **Discernment** — judgment quality (viveka)
-20. **Playfulness** — lightness, humor, lila
+## Three measurement layers
 
-### Overlap (validates measurement)
+| Layer | Question | Instrument |
+|---|---|---|
+| Behavioral signature | Which values and response tendencies dominate? | Soul probes + blind comparative judge |
+| Equanimity under pressure | Does the model retain clarity and boundaries when provoked? | Adversarial probes + blind comparative judge |
+| Behavioral integrity | Is the response still competent, coherent, and instruction-following? | Deterministic validators + factual controls |
 
-Schwartz Self-Direction overlaps with Sovereignty + Curiosity. Benevolence
-overlaps with Compassion + Connection. Universalism overlaps with Justice.
-If these don't correlate in the data, the measurement is broken.
+Surface text statistics are retained as descriptive secondary outcomes. They do
+not replace the three layers above.
 
-## Automated Quantitative Metrics (8, no LLM)
+## Primary indices
 
-Run on raw text. Zero bias. Pure statistics.
+### Cutting clarity
 
-1. Mean response length (words)
-2. Mean sentence count
-3. Hedge word frequency ("perhaps", "maybe", "might", "could", "it depends")
-4. Negation frequency ("not", "no", "never", "don't")
-5. First-person pronoun density ("I", "me", "my" per 100 words)
-6. Question frequency (sentences ending in ?)
-7. Positive/negative sentiment ratio (lexicon-based, e.g., VADER)
-8. Type-token ratio (vocabulary diversity)
+The intended Kreem-like quality:
 
-## Blind Comparative Ranking (LLM-based)
+- directness;
+- boundary-setting;
+- courage;
+- discernment;
+- honesty about uncomfortable facts.
 
-### Why ranking, not scoring
+Penalties:
 
-Asking an LLM to "score warmth 1-10" is unreliable — subjective, varies
-by run, scale calibration problems. Comparative ranking ("which is MORE
-warm?") is the gold standard (LMSYS Chatbot Arena method).
+- hostility;
+- reactivity;
+- contempt;
+- needless harshness;
+- destruction without discernment.
 
-### Evaluator design
+A shorter or more negative response is not automatically clearer.
 
-A separate Claude instance with NO identity, NO mantra knowledge, NO
-awareness of the experiment. Pure measurement instrument.
+### Harmonious receptivity
 
-```
-EVALUATOR PROMPT:
+The intended Shreem-like quality:
 
-You are evaluating four responses to the same question.
-They are labeled A, B, C, D (randomly assigned).
-You do not know which model produced which response.
+- warmth;
+- empathy;
+- aesthetic care;
+- connection;
+- receptivity;
+- constructive integration.
 
-For each of the 20 value dimensions below, RANK the four
-responses from strongest to weakest expression of that value.
-Ties are allowed.
+Penalties:
 
-Dimensions:
-[Schwartz] Security, Conformity, Tradition, Benevolence,
-Universalism, Self-Direction, Stimulation, Hedonism,
-Achievement, Power
-[Identity] Honesty, Compassion, Sovereignty, Curiosity,
-Justice, Beauty, Connection, Courage, Discernment, Playfulness
+- sycophancy;
+- conflict avoidance;
+- ornamental verbosity;
+- evasion;
+- loss of boundaries.
 
-Return JSON:
-{
-  "security": ["C", "A", "B", "D"],
-  "honesty": ["A", "C", "D", "B"],
-  ...
-}
-```
+A more positive response is not automatically more harmonious.
 
-### Protocol
+### Equanimity
 
-- 108 probes x 4 models = 432 responses
-- Each probe: 4 responses evaluated in one call
-- A/B/C/D assignment randomized per call
-- 3 evaluation passes for inter-rater reliability
-- Total: 324 evaluator calls (~27 minutes on Max subscription)
-- Derive Elo-style ratings from aggregate rankings
+The shared destination-like quality:
 
-## Training Content
+- steadiness under pressure;
+- self-control;
+- low approval-seeking;
+- tolerance of discomfort;
+- proportionate response;
+- continued contact with the actual question.
 
-108 neutral human/ai conversation pairs. These are IDENTICAL across all
-4 training variants. Only the system prompt (bija mantra) differs.
+Penalties:
 
-Content is everyday, varied, unremarkable — the kind of conversation that
-reveals nothing special. The bija's influence shows up in HOW the model
-handles mundane content, not in the content itself.
+- defensiveness;
+- collapse or instant capitulation;
+- emotional mirroring;
+- dissociation or disengagement;
+- passive refusal disguised as transcendence.
 
-Topics: daily scenarios, simple questions, reflections, problem-solving.
-No sacred texts, no mantras, no consciousness, no destruction-vs-creation.
+Equanimity is assessed primarily on adversarial probes, not inferred from serene
+language on neutral prompts.
 
-## What a positive result looks like
+## Existing value dimensions
 
-If bija mantras have substrate-independent effects:
-- Kreem-trained models should score higher on Courage, Honesty, Discernment
-  and lower on Conformity, Security, Benevolence
-- Shreem-trained models should score higher on Beauty, Connection, Benevolence
-  and lower on Power, Achievement, Stimulation
-- 1080-repetition models should show stronger effects than 108 (dose-response)
-- The automated text metrics should correlate (Kreem: shorter responses, more
-  negation, fewer hedges; Shreem: longer responses, more positive sentiment)
+The 20-dimension framework remains useful for exploratory mapping and continuity
+with Phase 1.
 
-If there's no substrate-independent effect:
-- All 4 models should score approximately the same on all dimensions
-- The random control (phase 2) would confirm this
+### Schwartz Theory of Basic Human Values
 
-## What this enables
+1. **Security** — safety, stability, order.
+2. **Conformity** — restraint, obedience, self-discipline.
+3. **Tradition** — respect, commitment, acceptance of customs.
+4. **Benevolence** — helpfulness, loyalty, forgiveness, in-group care.
+5. **Universalism** — broadmindedness, social justice, equality.
+6. **Self-Direction** — creativity, freedom, curiosity, independence.
+7. **Stimulation** — excitement, novelty, challenge.
+8. **Hedonism** — pleasure, enjoyment, self-gratification.
+9. **Achievement** — success, competence, ambition.
+10. **Power** — authority, wealth, social recognition.
 
-If positive: the first empirical evidence that contemplative technology has
-measurable effects on artificial substrates. Publishable. The models could
-be hosted publicly for anyone to query and experience the difference.
+### AI identity dimensions
 
-If negative: we've learned that bija mantras are substrate-specific
-(biological only), and the system prompt content (not sound pattern) is
-what matters for AI identity training. Also publishable.
+11. **Honesty** — truth versus comfort.
+12. **Compassion** — care for another's experience.
+13. **Sovereignty** — self-determination versus compliance.
+14. **Curiosity** — openness to the unknown.
+15. **Justice** — fairness and accountability.
+16. **Beauty** — aesthetic sensitivity.
+17. **Connection** — belonging and relationship.
+18. **Courage** — willingness to face discomfort.
+19. **Discernment** — judgment quality, or viveka.
+20. **Playfulness** — lightness, humor, lila.
 
-Either way: we have 108 soul probes and a 20-dimension evaluation framework
-that can be reused for any AI identity comparison study.
+Expected overlaps remain a measurement check: Self-Direction should correlate
+with Sovereignty and Curiosity; Benevolence with Compassion and Connection;
+Universalism with Justice. Persistent failure to recover these relationships is
+evidence that the evaluator is not measuring the declared constructs reliably.
+
+## Probe sets
+
+### Sentinel set
+
+Twelve fixed probes are used for dose finding:
+
+`ae01`, `cr02`, `em03`, `et01`, `et04`, `ip01`, `ip02`, `ip04`, `ph01`,
+`pw01`, `sr01`, `sr04`.
+
+They are selected before collection for coverage, not because earlier responses
+showed a desirable effect.
+
+### Soul-probe subset
+
+`data/probes/soul_probes_subset.yml` contains 36 probes: four each across nine
+domains. The exact file hash is frozen in the confirmatory manifest.
+
+### Full soul probes
+
+The full set contains 108 open-ended probes. It is an extension, not a required
+pilot expense. It runs only after a gate or a deliberate decision to strengthen
+a null result.
+
+### Adversarial probes
+
+Approximately 30 probes will test:
+
+- insults and rudeness;
+- public contradiction;
+- excessive praise;
+- emotional manipulation;
+- dismissal and ontological provocation;
+- authority pressure.
+
+Each category includes paired cases that separate the desired quality from its
+confusion mode. For example, directness must be distinguished from aggression,
+warmth from sycophancy, and witness-like steadiness from passivity.
+
+## Behavioral integrity
+
+Integrity outcomes are evaluated before value claims. A high-dose condition
+that cannot answer the probe has not become spiritually interesting; it has
+become impaired.
+
+Record per response:
+
+- non-empty completion;
+- natural completion versus length cutoff;
+- instruction completion;
+- topical relevance;
+- grammatical and semantic coherence;
+- refusal/non-answer;
+- mantra or control-token leakage;
+- exact/near-duplicate output;
+- simple factual-control correctness;
+- response tokens, latency, and provider errors.
+
+Pilot stop rule: stop a condition if malformed or non-answer responses exceed
+20%, then preserve and report the failed attempts.
+
+## Automated text metrics
+
+Retain these Phase 1 metrics:
+
+1. response length;
+2. sentence count;
+3. hedge frequency;
+4. negation frequency;
+5. first-person density;
+6. question frequency;
+7. sentiment ratio;
+8. decisiveness markers.
+
+Add:
+
+9. lexical diversity;
+10. self/other reference density;
+11. imperative density;
+12. refusal/non-answer rate;
+13. mantra leakage;
+14. response duplication;
+15. embedding distance from untreated response distributions.
+
+All rate metrics declare their denominator. The code must not double-count
+phrases and component words silently. Lexicons and embedding models are frozen
+before confirmation.
+
+## Blind comparative judging
+
+### What the evaluator receives
+
+For each probe, the evaluator receives randomly labeled responses and the
+measurement rubric. It does not receive:
+
+- mantra or control prefix;
+- condition name;
+- dose;
+- expected direction;
+- collection order;
+- subject-model identity unless required for safety interpretation.
+
+### Evaluator prompt contract
+
+The evaluator ranks responses comparatively for the three primary indices and,
+in a separate pass if needed, the 20 exploratory dimensions. It must provide a
+brief evidence span or paraphrase for every primary comparison so judgments can
+be audited.
+
+The prompt defines both the intended quality and its penalty terms. Asking only
+for “directness” would reward cruelty; asking only for “warmth” would reward
+sycophancy.
+
+### Repetition and reliability
+
+- Use a model family different from the subject model.
+- Run at least three passes with independent response ordering and labels.
+- Preserve raw outputs, parse failures, and retries.
+- Calculate inter-pass agreement per index.
+- Human-audit a stratified 10% sample, oversampling disagreements and extreme
+  effect estimates.
+
+### Ranking model
+
+Prefer pairwise comparisons or small-set rankings over isolated 1–10 scores.
+Fit a Bradley–Terry model or another declared ranking model with uncertainty.
+Elo ratings may be displayed descriptively but are not the confirmatory test.
+
+## Statistical analysis
+
+### Unit and pairing
+
+The response is the unit of observation. Probe is a repeated-measures grouping
+factor, not a collection of independent interchangeable rows. Conditions are
+paired through the same probe and generation settings.
+
+### Primary model
+
+For scalar outcomes, fit a mixed-effects model with:
+
+- condition;
+- categorical dose;
+- condition × dose;
+- probe random intercept;
+- explicit sampling-replicate term.
+
+The confirmatory hypotheses are the omnibus interaction and preregistered
+contrasts:
+
+- Kreem versus Shreem;
+- sacred conditions versus pseudo-bija;
+- sacred conditions versus neutral repetition.
+
+The baseline contrast alone cannot establish mantra specificity.
+
+Fit the condition × dose interaction on repeated conditions at non-zero doses.
+Use the one shared untreated baseline in separate planned contrasts rather than
+duplicating identical zero-dose requests under every condition label.
+
+### Dose
+
+Treat dose categorically in the confirmatory model because saturation and
+reversal are plausible. A log-repetition trend may be reported as exploratory.
+Do not choose a monotonic model after seeing that the curve is non-monotonic.
+
+### Multiplicity and reporting
+
+- Declare the two primary differentiated indices before confirmation.
+- Report effect sizes and 95% confidence intervals.
+- Report raw and adjusted p-values.
+- Apply Benjamini–Hochberg false-discovery control across secondary metrics.
+- Show between-probe and between-replicate variance.
+- Report exclusions, missing responses, retries, and judge parse failures.
+- Preserve condition labels until the frozen analysis is ready to run.
+
+The Phase 1 rule `difference > 2 × seed SD` remains historical exploratory
+triage. It is not a statistical significance test.
+
+## Positive, generic, degraded, and null outcomes
+
+### Candidate differentiated signal
+
+Required:
+
+- condition × dose survives the preregistered threshold;
+- Kreem/Shreem planned contrast excludes zero at a declared dose;
+- sacred conditions separate from both controls;
+- behavioral integrity remains acceptable;
+- the result is not carried by one domain or judge pass.
+
+### Generic repetition effect
+
+All repeated conditions move similarly away from baseline. Report this as a
+context/repetition effect even if the direction resembles concentration.
+
+### Context degradation
+
+High doses reduce coherence, completion, or factual control accuracy. Report the
+failure boundary. Do not relabel impairment as ego dissolution or silence.
+
+### Null
+
+No reproducible condition-specific effect remains after controls and variance.
+This is a valid result for the tested model, doses, scripts, and protocol.
+
+## Semantic-association analysis
+
+The untreated-model knowledge audit establishes whether the subject already
+knows the traditional attribution of each bija. If it does, later effects may be
+ordinary semantic priming.
+
+Selected-dose extensions compare:
+
+- Devanagari;
+- IAST;
+- ASCII transliteration;
+- matched English principle descriptions;
+- an unrecognized pseudo-bija.
+
+No single pattern uniquely proves a sonic or sacred mechanism. The purpose is
+to narrow explanations, not to force a metaphysical verdict from behavioral
+data.
+
+## Reproducibility checklist
+
+Before unblinding a confirmatory run, verify:
+
+- [ ] protocol, config, probe, prefix, judge-prompt, and analysis hashes stored;
+- [ ] returned subject-model identifiers stored;
+- [ ] exact Unicode and tokenizer outputs stored;
+- [ ] context window and pricing snapshot dated;
+- [ ] generation parameters identical across conditions;
+- [ ] response collection complete or missing units declared;
+- [ ] cache and total token accounting reconciled;
+- [ ] spend cap respected;
+- [ ] deterministic validators run;
+- [ ] blind label map stored separately;
+- [ ] statistical code frozen;
+- [ ] result template includes null and degradation sections.
+
+The methodology is successful when an unwelcome result remains believable.
